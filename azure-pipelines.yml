@@ -30,7 +30,7 @@ steps:
   inputs:
     gradleWrapperFile: 'sonar-scanner-gradle/gradle-basic/gradlew'
     workingDirectory: 'sonar-scanner-gradle/gradle-basic/'
-    options: '-Xmx3072m --debug'
+    options: '-Xmx3072m -d'
     tasks: 'build'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
