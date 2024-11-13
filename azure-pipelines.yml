@@ -24,6 +24,7 @@ steps:
       sonar.projectKey=gradle-basic-az-devops
         include:
             - 'sonar-scanner-gradle/gradle-basic/*'
+            
 
 - task: Gradle@3
   inputs:
