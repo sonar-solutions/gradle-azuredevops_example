@@ -22,6 +22,7 @@ steps:
       # sonar.exclusions=**/*.bin
       sonar.verbose=true
       sonar.projectKey=gradle-basic-az-devops
+      sonar.projectName=gradle-basic-az-devops
         include:
             - 'sonar-scanner-gradle/gradle-basic/*'
             
@@ -30,7 +31,7 @@ steps:
   inputs:
     gradleWrapperFile: 'sonar-scanner-gradle/gradle-basic/gradlew'
     workingDirectory: 'sonar-scanner-gradle/gradle-basic/'
-    options: '-d'
+    options: ''
     tasks: 'build'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
