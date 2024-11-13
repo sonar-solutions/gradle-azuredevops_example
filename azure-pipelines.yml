@@ -29,6 +29,7 @@ steps:
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'sonar-scanner-gradle/gradle-basic/gradlew'
+    workingDirectory: 'sonar-scanner-gradle/gradle-basic/'
     options: '-Xmx3072m'
     tasks: 'build'
     publishJUnitResults: true
@@ -40,4 +41,4 @@ steps:
     sonarQubeRunAnalysis: true
     sqGradlePluginVersionChoice: 'specify'
     sonarQubeGradlePluginVersion: '5.1.0.4882'
-    spotBugsAnalysis: false
+    spotBugsAnalysis: falsegradlew'
