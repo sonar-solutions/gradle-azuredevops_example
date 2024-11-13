@@ -32,8 +32,7 @@ steps:
     workingDirectory: 'sonar-scanner-gradle/gradle-basic/'
     options: '-Xmx3072m'
     tasks: 'build'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
+    publishJUnitResults: false
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageClassFilesDirectories: 'build/classes/main/'
     javaHomeOption: 'JDKVersion'
