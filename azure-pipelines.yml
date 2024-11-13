@@ -12,7 +12,18 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
+- task: SonarQubePrepare@7
+  inputs:
+    SonarQube: 'SonarQube Server'
+    scannerMode: 'other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.verbose=true
+      sonar.projectKey=gradle-basic-az-devops
+        include:
+            - 'sonar-scanner-gradle/gradle-basic/*'
 
 - task: Gradle@3
   inputs:
