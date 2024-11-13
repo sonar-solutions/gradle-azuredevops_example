@@ -33,8 +33,6 @@ steps:
     options: '-Xmx3072m --debug'
     tasks: 'build'
     publishJUnitResults: false
-    codeCoverageToolOption: 'JaCoCo'
-    codeCoverageClassFilesDirectories: 'build/classes/main/'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
     sonarQubeRunAnalysis: true
