@@ -28,7 +28,7 @@ steps:
 
 - task: Gradle@3
   inputs:
-    gradleWrapperFile: 'gradlew'
+    gradleWrapperFile: 'sonar-scanner-gradle/gradle-basic/gradlew'
     options: '-Xmx3072m'
     tasks: 'build'
     publishJUnitResults: true
