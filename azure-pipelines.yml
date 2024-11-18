@@ -28,7 +28,7 @@ steps:
       sonar.verbose=true
       sonar.projectKey=onboarding-examples_gradle-basic
       sonar.projectName=onboarding-examples_gradle-basic
-      sonar.organization=Azure-DevOps-Onboarding-Examples
+      #sonar.organization=Azure-DevOps-Onboarding-Examples
 
 - task: Gradle@3
   inputs:
