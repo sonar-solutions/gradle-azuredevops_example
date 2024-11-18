@@ -34,7 +34,7 @@ steps:
   inputs:
     gradleWrapperFile: 'sonar-scanner-gradle/gradle-basic/gradlew'
     workingDirectory: 'sonar-scanner-gradle/gradle-basic/'
-    options: '-i'
+    options: '-i -d'
     tasks: 'build'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
