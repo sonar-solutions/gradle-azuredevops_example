@@ -25,10 +25,10 @@ steps:
       # Additional properties that will be passed to the scanner, 
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
-      onar.verbose=true
-            sonar.projectKey=onboarding-examples_gradle-basic
-            sonar.projectName=onboarding-examples_gradle-basic
-            sonar.organization=onboarding-examples
+      sonar.verbose=true
+      sonar.projectKey=onboarding-examples_gradle-basic
+      sonar.projectName=onboarding-examples_gradle-basic
+      sonar.organization=Azure-DevOps-Onboarding-Examples
 
 - task: Gradle@3
   inputs:
