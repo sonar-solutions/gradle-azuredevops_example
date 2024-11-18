@@ -16,15 +16,30 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
+- task: SonarCloudPrepare@3
+  inputs:
+    SonarCloud: 'SonarQube Cloud Production'
+    organization: 'azure-devops-onboarding-examples'
+    scannerMode: 'other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      onar.verbose=true
+            sonar.projectKey=onboarding-examples_gradle-basic
+            sonar.projectName=onboarding-examples_gradle-basic
+            sonar.organization=onboarding-examples
 
 - task: Gradle@3
   inputs:
-    gradleWrapperFile: 'gradlew'  # Path to your Gradle wrapper
-    tasks: 'build'  # Replace with the tasks you want to run
-    options: '-Xmx3072m' 
+    gradleWrapperFile: 'gradlew'
+    options: '-Xmx3072m'
+    tasks: 'build'
     publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'  # Updated pattern for test result files
+    testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'  # Replace with your JDK version
-    jdkArchitectureOption: 'x64'
+    jdkVersionOption: '1.17'
+    sonarQubeRunAnalysis: true
+    sqGradlePluginVersionChoice: 'specify'
+    sonarQubeGradlePluginVersion: '5.1.0.4882'
+    spotBugsAnalysis: false
