@@ -21,8 +21,8 @@ steps:
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
       sonar.verbose=true
-      sonar.projectKey=gradle-basic-az-devops
-      sonar.projectName=gradle-basic-az-devops
+      sonar.projectKey=onboarding-examples_gradle-basic
+      sonar.projectName=onboarding-examples_gradle-basic
         include:
             - 'sonar-scanner-gradle/gradle-basic/*'
             
