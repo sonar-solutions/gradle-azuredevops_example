@@ -22,7 +22,7 @@ steps:
       # sonar.exclusions=**/*.bin
       sonar.verbose=true
       sonar.projectKey=onboarding-examples_gradle-basic
-      sonar.projectName=onboarding-examples_gradle-basic
+      sonar.projectName=Onboarding Example - AzureDevOps - Gradle Example
         include:
             - 'sonar-scanner-gradle/gradle-basic/*'
             
